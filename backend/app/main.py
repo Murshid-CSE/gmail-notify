@@ -98,18 +98,22 @@ def create_app() -> FastAPI:
     )
 
     # ── CORS ──────────────────────────────────────────
-    allowed_origins = (
-        ["http://localhost:3000", "http://localhost:8080"]
-        if not settings.is_production
-        else []  # Configure explicitly for production.
-    )
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=allowed_origins,
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
+    if not settings.is_production:
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1)(:\d+)?$",
+            allow_credentials=True,
+            allow_methods=["*"],
+            allow_headers=["*"],
+        )
+    else:
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origins=[],
+            allow_credentials=True,
+            allow_methods=["*"],
+            allow_headers=["*"],
+        )
 
     # ── Exception handlers ────────────────────────────
 

@@ -62,7 +62,7 @@ class _AppEntryScreenState extends State<AppEntryScreen> {
     if (provider.hasFetched) {
       _initFuture = Future.value();
     } else {
-      _initFuture = provider.fetchAccounts();
+      _initFuture = Future.microtask(() => provider.fetchAccounts());
     }
   }
 
