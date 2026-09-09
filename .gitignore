@@ -1,0 +1,87 @@
+# CareerMail AI
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+
+# Credentials & Tokens
+credentials/
+token*.json
+*.pem
+*.key
+service_account*.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker
+docker-compose.override.yml
+
+# Python virtual environment
+venv/
+.venv/
+env/
+
+# pytest
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Logs
+*.log
+logs/
+
+# Flutter
+mobile/.dart_tool/
+mobile/.packages
+mobile/.pub-cache/
+mobile/.pub/
+mobile/build/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/android/local.properties
+mobile/android/.gradle/
+mobile/android/app/debug/
+mobile/android/app/profile/
+mobile/android/app/release/
+mobile/ios/Pods/
+mobile/ios/.symlinks/
+mobile/ios/Flutter/Flutter.framework
+mobile/ios/Flutter/Flutter.podspec
+mobile/ios/Runner.xcworkspace/
+mobile/*.iml
+mobile/android/key.properties
+mobile/android/app/google-services.json
+mobile/ios/Runner/GoogleService-Info.plist
+mobile/ios/firebase_app_id_file.json
+
+# Firebase
+firebase_credentials.json
+google-services.json
+GoogleService-Info.plist
+firebase_app_id_file.json
